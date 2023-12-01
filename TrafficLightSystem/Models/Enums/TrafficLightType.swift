@@ -28,12 +28,10 @@ enum TrafficLightType: Int {
 
     var duration: TimeInterval {
         switch self {
-        case .red:
-            4.0
+        case .red, .green:
+            AnimationTime.slowest.rawValue * 4
         case .yellow:
-            1.0
-        case .green:
-            4.0
+            AnimationTime.slowest.rawValue
         }
     }
 

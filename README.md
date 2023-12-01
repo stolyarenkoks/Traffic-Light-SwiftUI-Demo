@@ -4,7 +4,7 @@ Developed entirely natively using Swift and SwiftUI.
 
 ![Demo](demo.gif)
 
-✅ The idea was to create a traffic light system.
+The idea was to create a traffic light system.
 
 ✅ The app consists of 2 screens:
 
