@@ -37,7 +37,7 @@
 		C464DA532B190C1B003F05FD /* TrafficLightType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLightType.swift; sourceTree = "<group>"; };
 		C464DA562B190EB0003F05FD /* DispatchTime+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchTime+Extensions.swift"; sourceTree = "<group>"; };
 		C464DA582B193588003F05FD /* LightBulbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightBulbView.swift; sourceTree = "<group>"; };
-		C464DA5C2B19393B003F05FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C464DA5C2B19393B003F05FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +70,6 @@
 		C464DA2A2B18D067003F05FD /* TrafficLightSystem */ = {
 			isa = PBXGroup;
 			children = (
-				C464DA5C2B19393B003F05FD /* Info.plist */,
 				C464DA392B18D23B003F05FD /* Constants */,
 				C464DA512B190BFB003F05FD /* Models */,
 				C464DA4E2B18E47A003F05FD /* Views */,
@@ -120,6 +119,7 @@
 		C464DA3D2B18D364003F05FD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C464DA5C2B19393B003F05FD /* Info.plist */,
 				C464DA3E2B18D370003F05FD /* README.md */,
 			);
 			path = "Supporting Files";
@@ -202,6 +202,7 @@
 				C464DA242B18D067003F05FD /* Sources */,
 				C464DA252B18D067003F05FD /* Frameworks */,
 				C464DA262B18D067003F05FD /* Resources */,
+				C41058EC2B19E30A000A0E6E /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -257,6 +258,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C41058EC2B19E30A000A0E6E /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Adds support for Apple Silicon brew directory\nexport PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint; then\n    swiftlint —-fix && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C464DA242B18D067003F05FD /* Sources */ = {
@@ -407,8 +430,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 487D8YHE27;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TrafficLightSystem/Info.plist;
+				INFOPLIST_FILE = "TrafficLightSystem/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
@@ -436,8 +460,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 487D8YHE27;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TrafficLightSystem/Info.plist;
+				INFOPLIST_FILE = "TrafficLightSystem/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;

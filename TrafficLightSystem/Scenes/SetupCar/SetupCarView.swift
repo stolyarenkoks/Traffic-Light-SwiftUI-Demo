@@ -52,7 +52,6 @@ struct SetupCarView: View {
         .multilineTextAlignment(.center)
 
         .padding(32.0)
-        
     }
 
     private func startButton() -> some View {

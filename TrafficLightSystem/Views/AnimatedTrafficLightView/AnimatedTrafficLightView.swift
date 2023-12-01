@@ -15,13 +15,13 @@ struct AnimatedTrafficLightView: View {
     // MARK: - Private Properties
 
     @State private var currentLight: TrafficLightType = .red
-    @State private var currentIndex = 0
+    @State private var currentIndex: Int = .zero
     @State private var isReversed = false
 
     // MARK: - Body
 
     var body: some View {
-        VStack(spacing: 0) {
+        VStack(spacing: .zero) {
             VStack(spacing: 16.0) {
                 LightBulbView(color: .red, isOn: currentLight == .red)
                 LightBulbView(color: .yellow, isOn: currentLight == .yellow)
